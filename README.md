@@ -33,7 +33,8 @@ npm install
 npm run dev 
 
 # 配置七牛的key
-配置文件地址：build/config.js
+# 复制一个配置文件
+cp build/config.example.js build/config.js
 
 # 部署上线(会自动上传到七牛，需要配置 ak,sk)
 npm run release
@@ -44,13 +45,20 @@ npm run lint
 # 会自动修复常规错误
 npm run lint:fix  
 ```
+
  
-## 四、生成代码截图
+## 四、截图
 >文件加上 md5，路径自动替换
 >目录结构保持不变
 
+### 1. 代码截图
 ![](http://ww1.sinaimg.cn/large/006tKfTcgw1famv34szbwj31kw0xlqbo.jpg)
 
+### 2. 配置文件截图
+![](http://ww4.sinaimg.cn/large/006tKfTcgw1famvp96me9j30ns0dagn3.jpg)
+
+### 模块化gulp任务
+![](http://ww1.sinaimg.cn/large/006tKfTcgw1famvqwp9o5j31g60vgq8g.jpg)
 
 ## 五、参考文章
 1. [前端构建工具gulpjs的使用介绍及技巧](http://www.cnblogs.com/2050/p/4198792.html)

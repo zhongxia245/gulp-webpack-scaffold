@@ -32,7 +32,7 @@ gulp + webpack + stylus + babel + autoprefix + postcss + nodejs + md5
 ## 三、如何使用
 ```bash
 # 下载代码
-git clone [github-url]
+git clone https://github.com/zhongxia245/gulp-webpack-scaffold.git
 
 # 安装依赖
 npm install 

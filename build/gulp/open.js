@@ -14,7 +14,7 @@ var browser = os.platform() === 'linux' ? 'Google chrome' : (
     os.platform() === 'darwin' ? 'Google chrome' : (
         os.platform() === 'win32' ? 'chrome' : 'firefox'))
 
-gulp.task('open', ['webpack-js', 'build-stylus', 'build-html', 'build-img'], function(done) {
+gulp.task('open', ['webpack-js', 'build-stylus', 'build-html', 'build-img'], function (done) {
     gulp.src('')
         .pipe(gulpOpen({
             app: browser,
@@ -23,7 +23,7 @@ gulp.task('open', ['webpack-js', 'build-stylus', 'build-html', 'build-img'], fun
         .on('end', done)
 })
 
-gulp.task('connect', function() {
+gulp.task('connect', function () {
     connect.server({
         root: host.path,
         port: host.port,

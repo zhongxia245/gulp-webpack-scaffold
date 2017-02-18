@@ -1,3 +1,14 @@
 {
-    "ignore": ["node_modules", "src/common/lib"]
+    "ignore": [
+        "node_modules",
+        "src/common/lib"
+    ],
+    "presets": [
+        "es2015",
+        "stage-0",
+        "react"
+    ],
+    "plugins": [
+        "transform-runtime"
+    ]
 }

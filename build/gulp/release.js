@@ -4,7 +4,6 @@ var replace = require('gulp-replace')
 var del = require('del')
 
 function replaceFunc(match, p1) {
-    console.log(p1)
     var manifest = require(global.MANIFEST)
     return global.DIST_DIR + manifest[p1]
 }
@@ -18,6 +17,8 @@ gulp.task('release-js', [
 
 //文件文件加上MD5,输出到 release目录下
 gulp.task('release-rev', ['release-js'], function () {
+    console.log('start add filename md5....')
+
     return gulp.src(['dist/**/*.css',
         'dist/**/*.js',
         'dist/**/*.+(png|gif|jpg|eot|woff|ttf|svg|ico)',
@@ -31,6 +32,7 @@ gulp.task('release-rev', ['release-js'], function () {
 
 //替换html，css,js 中使用到的文件换成md5形式的文件名
 gulp.task('html-css-js-replace', ['release-rev'], function () {
+    console.log('start replace filename to md5 filename...')
     return gulp.src(['release/**/*.css', 'release/**/*.js', 'dist/**/*.html'])
         .pipe(replace(global.REGEX, replaceFunc))
         .pipe(gulp.dest('release'))
@@ -43,6 +45,6 @@ gulp.task('set-release', function () {
 
 // 部署
 gulp.task('release', ['set-release', 'html-css-js-replace'], function (cb) {
-    del(['dist'], cb)
-    gulp.start('uploadQN')
+    // del(['dist'], cb)
+    // gulp.start('uploadQN')
 })

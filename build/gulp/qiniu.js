@@ -6,6 +6,7 @@ var accessKey = config.QN_ACCESS_KEY
 var secretKey = config.QN_SECRE_KEY
 var bucket = config.QN_BUCKET
 var dir = config.QN_DIR
+var upload = config.QN_UPLOAD_URL
 
 gulp.task('uploadQN', () => {
   return gulp.src(['release/**', '!release/**/*.map'])
@@ -14,6 +15,7 @@ gulp.task('uploadQN', () => {
       secretKey: secretKey,
       bucket: bucket
     }, {
-        dir: dir
+        dir: dir,
+        uploadURL: upload
       }))
 })

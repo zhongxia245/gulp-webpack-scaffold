@@ -7,5 +7,6 @@ module.exports = {
     QN_ACCESS_KEY: 'QN_ACCESS_KEY',
     QN_SECRE_KEY: 'QN_SECRE_KEY',
     QN_BUCKET: 'QN_BUCKET',
-    QN_DIR: 'QN_DIR'
+    QN_DIR: 'QN_DIR',
+    QN_UPLOAD_URL: 'QN_UPLOAD_URL'
 }
